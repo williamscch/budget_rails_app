@@ -53,6 +53,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 gem 'byebug', '~> 9.0', '>= 9.0.6'
+gem 'solargraph', group: :development
 
 # Use Sass to process CSS
 # gem "sassc-rails"
