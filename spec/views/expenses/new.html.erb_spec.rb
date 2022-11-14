@@ -1,24 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe "expenses/new", type: :view do
+RSpec.describe 'expenses/new', type: :view do
   before(:each) do
     assign(:expense, Expense.new(
-      name: "MyString",
-      amount: 1.5,
-      group: nil
-    ))
+                       name: 'MyString',
+                       amount: 1.5,
+                       group: nil
+                     ))
   end
 
-  it "renders new expense form" do
+  it 'renders new expense form' do
     render
 
-    assert_select "form[action=?][method=?]", expenses_path, "post" do
+    assert_select 'form[action=?][method=?]', expenses_path, 'post' do
+      assert_select 'input[name=?]', 'expense[name]'
 
-      assert_select "input[name=?]", "expense[name]"
+      assert_select 'input[name=?]', 'expense[amount]'
 
-      assert_select "input[name=?]", "expense[amount]"
-
-      assert_select "input[name=?]", "expense[group_id]"
+      assert_select 'input[name=?]', 'expense[group_id]'
     end
   end
 end
