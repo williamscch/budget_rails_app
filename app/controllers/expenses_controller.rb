@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = @user.expenses.new
-    @expense.group_id = @group.id
+    @expense.group_ids = @group.id
   end
 
   # GET /expenses/1/edit
@@ -26,7 +26,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to group_path(@expense.group_id), notice: 'Expense was successfully created.' }
+        format.html { redirect_to group_path(@expense.group_ids), notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -75,6 +75,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount, :group_id)
+    params.require(:expense).permit(:name, :amount, :group_ids)
   end
 end

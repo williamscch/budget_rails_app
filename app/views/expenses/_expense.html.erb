@@ -11,7 +11,9 @@
 
   <p>
     <strong>Group:</strong>
-    <%= expense.group_id %>
+    <%= expense.group_ids %>
   </p>
+
+  <%= link_to "Edit", edit_group_expense_path(@category, expense) %>
 
 </div>

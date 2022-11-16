@@ -1,0 +1,9 @@
+<section>
+<div class="splash">
+  <h1>My Spend Manager</h1>
+  <% unless user_signed_in? %>
+    <%= link_to "LOG IN", new_user_session_path, :class => 'btn btn-primary mt-5 mb-2 login' %>
+    <%= link_to "SIGN UP", new_user_registration_path, :class => 'btn mb-2 sign-up' %>
+  <% end %>
+</div>
+</section>
