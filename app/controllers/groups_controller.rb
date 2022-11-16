@@ -1,17 +1,20 @@
 class GroupsController < ApplicationController
+  before_action :set_user
   before_action :set_group, only: %i[show edit update destroy]
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = @user.groups
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @expenses = @group.expenses.order(created_at: :desc)
+  end
 
   # GET /groups/new
   def new
-    @group = Group.new
+    @group = @user.groups.new
   end
 
   # GET /groups/1/edit
@@ -19,7 +22,7 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
+    @group = @user.groups.new(group_params)
 
     respond_to do |format|
       if @group.save
@@ -57,6 +60,10 @@ class GroupsController < ApplicationController
 
   private
 
+  def set_user
+    @user = current_user
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_group
     @group = Group.find(params[:id])
@@ -64,6 +71,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.require(:group).permit(:name, :icon, :user_id)
+    params.require(:group).permit(:name, :icon)
   end
 end
