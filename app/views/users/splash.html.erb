@@ -1,9 +1,8 @@
-<section>
-  <div class="splash">
-    <%= image_tag('logo.png', class: 'splash-logo') %>
-    <% unless user_signed_in? %>
-      <%= link_to "LOG IN", new_user_session_path, :class => 'btn btn-primary mt-5 mb-2 login' %>
-      <%= link_to "SIGN UP", new_user_registration_path, :class => 'btn mb-2 sign-up' %>
-    <% end %>
-  </div>
+<section class='splash'>
+  <%= image_tag('logo.png', class: 'splash-logo') %>
+  <% unless user_signed_in? %>
+  <div class='splash-btn'>
+    <%= link_to "LOG IN", new_user_session_path, :class => 'login-btn' %>
+    <%= link_to "SIGN UP", new_user_registration_path, :class => 'signup-btn' %>
+  <% end %>
 </section>
