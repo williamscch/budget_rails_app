@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --blue: #3778c2;
+  --gray: #434b54;
+  --green: #5fb523;
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Splash screen */
+
+.splash-logo {
+    width: 22rem;
+}
