@@ -15,12 +15,14 @@
   <body>
     <% if user_signed_in?%>
       <nav>
-        <ul>
+        <ul class='navbar'>
           <li>        <%= link_to "Home", root_path%>
           </li>
-          <li>        <%= link_to "Expenses History", group_expenses_path(@user.groups.first.id)%>
-          </li>
-          <li>        <%= link_to "Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }%>
+          <% unless @user.groups.present? %>
+            <li>        <%= link_to "Expenses History", group_expenses_path(@user.groups.first.id) %>
+            </li>
+          <%end%>
+          <li>        <%= link_to @user.name, user_path(@user) %>
           </li>
         </ul>
       </nav>

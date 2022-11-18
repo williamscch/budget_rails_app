@@ -1,17 +1,11 @@
-<div id="<%= dom_id group %>">
+<div class='single-group' id="<%= dom_id group %>">
   <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
     <%= group.icon %>
   </p>
-
   <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
+    <%=link_to group.name, group_path(group) %>
   </p>
-
+  <p class="group-price">
+    <%= number_to_currency(group.expenses.sum(:amount)) %>
+  </p>
 </div>

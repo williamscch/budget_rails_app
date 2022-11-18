@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :groups do
     resources :expenses
   end
-  resources :users, only: %i[edit update]
+  resources :users, only: %i[edit update show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   devise_scope :user do
     get '/users/sign_out', to: 'devise/sessions#destroy'
