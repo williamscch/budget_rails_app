@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :groups do
-    resources :expenses
+    resources :expenses, except: :show
   end
   resources :users, only: %i[edit update show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

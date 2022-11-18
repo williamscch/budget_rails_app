@@ -16,5 +16,6 @@
       <%= @group.icon %>
     </p>
     <%= link_to "Edit", edit_group_expense_path(@group, expense) %>
+    <%= button_to "Delete", group_expense_path(@group, expense), method: :delete %>
   </div>
 </div>

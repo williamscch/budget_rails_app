@@ -28,9 +28,9 @@
   text-decoration: none;
 }
 
-body {
+/* body {
   height: 100vh;
-}
+} */
 
 /* Splash screen */
 
@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .splash-logo {
@@ -80,7 +80,7 @@ body {
 
 form {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 .sign-up-header,
@@ -300,4 +300,20 @@ nav {
 
 .expense-info a {
   margin: 0;
+}
+
+.expense-info form.button_to button {
+  margin: 0;
+}
+
+/* user show */
+
+.user-name {
+  font-size: 2rem;
+  color: var(--gray);
+}
+
+.user-email {
+  font-size: 1.6rem;
+  color: var(--gray);
 }

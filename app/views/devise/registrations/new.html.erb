@@ -7,25 +7,28 @@
     </div>
   </div>
   <%= render "devise/shared/error_messages", resource: resource %>
-  <div class='form-inputs'>
-    <div class='div-input'>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name" %>
+  <div class="groups-index">
+    <div class='form-inputs'>
+      <div class='div-input'>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name" %>
+      </div>
+      <div class='div-input'>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+      </div>
+      <div class='div-input'>
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "******" %>
+      </div>
+      <div class='div-input'>
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "******" %>
+      </div>
     </div>
-    <div class='div-input'>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
-    </div>
-    <div class='div-input'>
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "******" %>
-    </div>
-    <div class='div-input'>
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "******" %>
-    </div>
-  </div>
-<% end %>
-<%= render "devise/shared/links" %>
+  <% end %>
+  <h3>You already have an account?</h3>
+  <%= render "devise/shared/links" %>
+</div>
 </div>

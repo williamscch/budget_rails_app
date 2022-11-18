@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    @expenses = @group.expenses
+    @expenses = @group.expenses.order(created_at: :desc)
   end
 
   # GET /groups/new

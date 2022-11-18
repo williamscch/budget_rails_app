@@ -8,9 +8,6 @@ class ExpensesController < ApplicationController
     @expenses = @user.expenses.all.order(created_at: :desc)
   end
 
-  # GET /expenses/1 or /expenses/1.json
-  def show; end
-
   # GET /expenses/new
   def new
     @expense = @user.expenses.new
