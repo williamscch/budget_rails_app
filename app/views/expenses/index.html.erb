@@ -1,14 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Expenses</h1>
-
-<div id="expenses">
-  <% @expenses.each do |expense| %>
-    <%= render expense %>
-    <p>
-      <%= link_to "Show this expense", group_expense_path(@group, expense) %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New expense", new_group_expense_path %>
+<section class="groups-index">
+  <p style="color: green"><%= notice %></p>
+  <h1>Expenses</h1>
+  <div id="expenses">
+    <% @expenses.each do |expense| %>
+      <%= render expense %>
+      <p>
+        <%= link_to "Show this expense", group_expense_path(@group, expense) %>
+      </p>
+    <% end %>
+  </div>
+  <%= link_to "New expense", new_group_expense_path %>
+  <section>
