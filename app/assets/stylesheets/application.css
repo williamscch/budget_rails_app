@@ -142,18 +142,6 @@ nav {
   justify-content: flex-start;
 }
 
-/* NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.navbar li a {
-  color: white;
-}
-
 /* Groups index page */
 
 .groups-index {
@@ -205,12 +193,6 @@ nav {
 .single-group p {
   font-size: 1.8rem;
   margin: 0;
-}
-
-.single-group p a {
-  background-color: transparent;
-  font-size: 1.8rem;
-  color: var(--gray);
 }
 
 .group-price {
@@ -315,5 +297,23 @@ nav {
 
 .user-email {
   font-size: 1.6rem;
+  color: var(--gray);
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.navbar li a {
+  color: white;
+}
+
+.single-group p a {
+  background-color: transparent;
+  font-size: 1.8rem;
   color: var(--gray);
 }

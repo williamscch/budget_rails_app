@@ -18,7 +18,7 @@
         <ul class='navbar'>
           <li>        <%= link_to "Home", root_path%>
           </li>
-          <% unless @user.groups.present? %>
+          <% if @user.groups.exists? %>
             <li>        <%= link_to "Expenses History", group_expenses_path(@user.groups.first.id) %>
             </li>
           <%end%>
