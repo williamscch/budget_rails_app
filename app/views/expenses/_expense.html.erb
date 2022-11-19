@@ -1,17 +1,21 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
-
-  <p>
-    <strong>Group:</strong>
-    <%= expense.group_id %>
-  </p>
-
+<div class='expense' id="<%= dom_id expense %>">
+  <div class="expense-main">
+    <p class="expense-title">
+      <%= expense.name %>
+    </p>
+    <p class="group-price">
+      <%= number_to_currency(expense.amount) %>
+    </p>
+  </div>
+  <div class="expense-info">
+    <p>
+      <%= expense.created_at.strftime("%e %b %y") %>
+    </p>
+    <p>
+      <strong>Group:</strong>
+      <%= @group.icon %>
+    </p>
+    <%= link_to "Edit", edit_group_expense_path(@group, expense) %>
+    <%= button_to "Delete", group_expense_path(@group, expense), method: :delete %>
+  </div>
 </div>

@@ -1,14 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
-
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New group", new_group_path %>
+<section class="groups-index">
+  <p style="color: green"><%= notice %></p>
+  <h1>GROUPS</h1>
+   <%= link_to "New group", new_group_path %>
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <%= render group %>
+    <% end %>
+  </div>
+</section>

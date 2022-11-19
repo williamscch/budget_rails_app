@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @group %>
-
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+<section class="groups-index">
+  <p style="color: green"><%= notice %></p>
+  <%= render @group %>
+  <div class="group-options-btns">
+    <%= link_to "New expense", new_group_expense_path(@group, @expense), class: "btn-main" %>
+    <%= link_to "Edit this group", edit_group_path(@group) %>
+    <%= button_to "Delete this group", @group, method: :delete %>
+  </div>
+  <div class="expenses">
+    <%= render @expenses %>
+  </div>
+  <section>

@@ -1,8 +1,7 @@
-<%= form_with(model: expense) do |form| %>
+<%= form_with(model: [@group, @expense]) do |form| %>
   <% if expense.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
-
       <ul>
         <% expense.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,23 +9,19 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
-  </div>
-
-  <div>
-    <%= form.label :group_id, style: "display: block" %>
-    <%= form.text_field :group_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class='form-inputs'>
+    <div class='div-input'>
+      <%= form.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Expense Name" %>
+    </div>
+    <div class='div-input'>
+      <%= form.number_field :amount, autofocus: true, autocomplete: "amount", placeholder: "Amount" %>
+    </div>
+    <div class='div-input'>
+      <%= form.label :group_id, style: "display: block" %>
+      <%= form.text_field :group_ids %>
+    </div>
+    <div class='submit-btn'>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

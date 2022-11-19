@@ -13,3 +13,307 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --blue: #3778c2;
+  --gray: #434b54;
+  --green: #5fb523;
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* body {
+  height: 100vh;
+} */
+
+/* Splash screen */
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.splash-logo {
+  width: 22rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.splash-btn {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  background-color: var(--blue);
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.signup-btn {
+  color: var(--gray);
+  font-size: 1.3rem;
+}
+
+/* Sign-up page */
+
+form {
+  width: 100%;
+  height: 50%;
+}
+
+.sign-up-header,
+nav {
+  height: 3.5rem;
+  background-color: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0.8rem;
+  align-items: center;
+}
+
+.go-back {
+  color: white;
+  font-size: 1rem;
+}
+
+.submit input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.shared-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-inputs {
+  margin-top: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.div-input {
+  margin: 0.15rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div-input input {
+  height: 2rem;
+}
+
+.check-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Groups index page */
+
+.groups-index {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.groups-index h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--gray);
+}
+
+.groups-index a {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: var(--green);
+  text-align: center;
+}
+
+#groups {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* single Group */
+
+.single-group {
+  height: 3rem;
+  padding: 5px;
+  width: 90%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 50% 30%;
+  background-color: rgb(225, 225, 225);
+}
+
+.single-group p {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.group-price {
+  margin-left: auto;
+  font-size: 1.3rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+#group_icon {
+  height: 2.7rem;
+  font-size: 2rem;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.submit-btn input {
+  border: none;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: var(--green);
+}
+
+/* group show */
+
+.group-options-btns {
+  display: flex;
+  margin-top: 1rem;
+  width: 90%;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.button_to {
+  width: auto;
+}
+
+.button_to button {
+  background-color: red;
+  border: none;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.expenses {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.expense {
+  height: 4rem;
+  padding: 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(225, 225, 225);
+}
+
+.expense-main,
+.expense-info {
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+
+.expense-title {
+  font-size: 1.6rem;
+  color: var(--gray);
+}
+
+.expense-info {
+  justify-content: space-between;
+}
+
+.expense-info a {
+  margin: 0;
+}
+
+.expense-info form.button_to button {
+  margin: 0;
+}
+
+/* user show */
+
+.user-name {
+  font-size: 2rem;
+  color: var(--gray);
+}
+
+.user-email {
+  font-size: 1.6rem;
+  color: var(--gray);
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.navbar li a {
+  color: white;
+}
+
+.single-group p a {
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: var(--gray);
+}
