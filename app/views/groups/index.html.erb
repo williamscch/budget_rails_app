@@ -1,10 +1,11 @@
-<section class="groups-index">
-  <p style="color: green"><%= notice %></p>
-  <h1>GROUPS</h1>
-  <div id="groups">
-    <% @groups.each do |group| %>
-      <%= render group %>
-    <% end %>
-  </div>
-  <%= link_to "New group", new_group_path %>
-</section>
+<% provide(:title, "GROUPS") %>
+<h2 class='title'>
+  <%= @user.name %>
+  <%= link_to "✐", edit_user_registration_path %>
+</h2>
+<div id="categories" class="inner-container flex" >
+  <% @groups.each do |group| %>
+    <%= render group %>
+  <% end %>
+</div>
+<%= link_to "New group", new_group_path, class: "btn-main" %>
