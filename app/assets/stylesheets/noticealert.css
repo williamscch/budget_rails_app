@@ -1,0 +1,17 @@
+.notice,
+.alert {
+  width: 100%;
+  min-height: min-content;
+  background-color: var(--color-third);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2.3rem;
+  opacity: 90%;
+  letter-spacing: 1px;
+}
+
+.alert {
+  background-color: var(--color-second);
+}

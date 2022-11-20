@@ -13,25 +13,13 @@
     <%= favicon_link_tag asset_path('favicon.png') %>
   </head>
   <body>
-    <% if user_signed_in?%>
-      <nav>
-        <ul class='navbar'>
-          <li>        <%= link_to "Home", root_path%>
-          </li>
-          <% if @user.groups.exists? %>
-            <li>        <%= link_to "Expenses History", group_expenses_path(@user.groups.first.id) %>
-            </li>
-          <%end%>
-          <li>        <%= link_to @user.name, user_path(@user) %>
-          </li>
-        </ul>
-      </nav>
-    <%end%>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %> <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <%= yield %>
+    <main>
+      <%= render partial: 'layouts/navbar' %>
+      <div class="container flex">
+        <h3 class="notice"><%= notice %></h3>
+        <h3 class="alert"><%= alert %></h3>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

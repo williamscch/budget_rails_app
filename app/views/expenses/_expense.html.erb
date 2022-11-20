@@ -1,21 +1,15 @@
-<div class='expense' id="<%= dom_id expense %>">
-  <div class="expense-main">
-    <p class="expense-title">
-      <%= expense.name %>
-    </p>
-    <p class="group-price">
-      <%= number_to_currency(expense.amount) %>
-    </p>
-  </div>
-  <div class="expense-info">
-    <p>
-      <%= expense.created_at.strftime("%e %b %y") %>
-    </p>
-    <p>
-      <strong>Group:</strong>
-      <%= @group.icon %>
-    </p>
-    <%= link_to "Edit", edit_group_expense_path(@group, expense) %>
-    <%= button_to "Delete", group_expense_path(@group, expense), method: :delete %>
+<div id="<%= dom_id expense %>" class="card flex exp">
+  <p class="exp-name">
+    <strong><%= expense.name %></strong>
+  </p>
+  <p class="exp-amount">
+    $
+    <strong><%= expense.amount %></strong>
+  </p>
+  <div class="exp-div">
+    <%= link_to "✎", edit_group_expense_path(@group, expense) %>
+    <% expense.groups.each do |group| %>
+      <p class="exp-icon"><%= group.icon %></p>
+    <% end %>
   </div>
 </div>

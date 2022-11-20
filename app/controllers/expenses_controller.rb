@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = @user.expenses.all.order(created_at: :desc)
+    @expenses = @group.expenses
   end
 
   # GET /expenses/new
@@ -72,6 +72,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount, :group_ids)
+    params.require(:expense).permit(:name, :amount, group_ids: [])
   end
 end

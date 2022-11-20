@@ -9,15 +9,11 @@
       </ul>
     </div>
   <% end %>
-  <div class='form-inputs'>
-    <div class='div-input'>
-      <%= form.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name" %>
-    </div>
-    <div class='div-input'>
-      <%= form.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
-    </div>
-    <div class='submit-btn'>
-      <%= form.submit %>
-    </div>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.submit %>
   </div>
 <% end %>
