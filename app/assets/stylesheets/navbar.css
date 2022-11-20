@@ -37,7 +37,7 @@
 .nav-item,
 .nav-item a {
   font-size: 13px;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
   width: 25%;
   text-align: center;
@@ -55,4 +55,13 @@
 
 .nav-logout {
   text-align: right;
+}
+
+.nav-item form button {
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  border: none;
 }
