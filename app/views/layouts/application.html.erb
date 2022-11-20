@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Spend Manager</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+  </head>
+  <body>
+    <main>
+      <%= render partial: 'layouts/navbar' %>
+      <div class="container flex">
+        <h3 class="notice"><%= notice %></h3>
+        <h3 class="alert"><%= alert %></h3>
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

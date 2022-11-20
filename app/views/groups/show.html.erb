@@ -1,0 +1,13 @@
+<% provide(:title, "GROUP") %>
+<% if can? :manage, @group %>
+  <div id="categories" class="inner-container flex" >
+    <%= render @group %>
+  </div>
+  <div id="expenses" class="inner-container flex">
+    <%= render @expenses %>
+  </div>
+  <%= link_to "New expense", new_group_expense_path(@group, @expense), class: "btn-main" %>
+  <%= link_to "Edit this group", edit_group_path(@group), class: "btn-white" %>
+<% else %>
+  <h2>Not your group. Go Back.</h2>
+<% end %>

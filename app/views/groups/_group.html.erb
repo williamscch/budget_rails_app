@@ -1,0 +1,13 @@
+<%= link_to group do %>
+  <div id="<%= dom_id group %>" class="card flex">
+    <p class="cat-icon">
+      <strong><%= group.icon %></strong>
+    </p>
+    <p class="cat-name">
+      <strong><%= group.name %></strong>
+    </p>
+    <p class="cat-total">Total:
+      <strong>$ <%= group.expenses.sum(:amount) %></strong>
+    </p>
+  </div>
+<% end %>
