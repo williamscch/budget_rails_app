@@ -28,6 +28,17 @@ The result should look similar to the following data model:
 - [x] Limit access to webapp resources based on authorization rules.
 - [x] Analyze in writing why you have made a coding choice using one structure over another.
 
+## Interface Preview
+
+![App Screenshot](./screenshots./ss1.png)
+![App Screenshot](./screenshots./ss2.png)
+![App Screenshot](./screenshots./ss3.png)
+![App Screenshot](./screenshots./ss4.png)
+![App Screenshot](./screenshots./ss5.png)
+![App Screenshot](./screenshots./ss6.png)
+![App Screenshot](./screenshots./ss7.png)
+![App Screenshot](./screenshots./ss8.png)
+
 ## Project Documentation 📄
 
 - [x] Here is the presentation video [link]()👈
